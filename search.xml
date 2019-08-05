@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Manage docker dengan mudah menggunakan portainer.io</title>
+      <link href="/Manage-docker-dengan-mudah-menggunakan-portainer/"/>
+      <url>/Manage-docker-dengan-mudah-menggunakan-portainer/</url>
+      
+        <content type="html"><![CDATA[<p>mulai dari Install, sampai manage docker menggunakan portainer. Membuat docker lebih manusiawi, dan mudah  dipahami.</p><h2 id="Pembukaan"><a href="#Pembukaan" class="headerlink" title="Pembukaan"></a>Pembukaan</h2><p><img src="https://i.loli.net/2017/11/04/59fd9586de1ea.jpg" alt><br>Hallo semuanya, kembali lagi dengan saya. Dan kali ini saya akan memberikan tutorial mulai dari install sampai memanage docker menggunakan <code>portainer</code>.<br>Jika kalian baru pertama kali menggunakan docker, dan mencari cara agar docker lebih <code>manusiawi</code> berarti kalian tepat mengunjungi post ini, karena akan dijelaskan agar docker lebih <code>manusiawi</code> .</p><h2 id="Awalan"><a href="#Awalan" class="headerlink" title="Awalan"></a>Awalan</h2><p>Untuk memanage docker biasanya kita menggunakan command line atau <code>CLI</code> dan bagi sebagian orang pusing, dan tidak bisa mengingat perintah yang harus dijalankan, maka dari itu ada terobosan untuk menggunakan / memanage docker secara <code>GUI</code>, dan portainer ini berbasis web.<br>Jadi portainer itu sebuah image yang nantinya akan dijalankan sebagai container, untuk remote docker.</p><h2 id="Masuk-ke-tutorial"><a href="#Masuk-ke-tutorial" class="headerlink" title="Masuk ke tutorial"></a>Masuk ke tutorial</h2><p>Oke langsung saja masuk ketutorialnya, sebelum memanage docker secara GUI, download/pull image portainer terlebih dahulu dari docker hub, jika kalian ada kendala kuota santai saja, karena hanya membutuhkan 10MB saja.<br>Kecil bukan? ya sangat kecil dan ringan pastinya.</p><p>Untuk pull image nya bisa menggunakan perintah :</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wahidhusain:~ <span class="comment"># docker pull portainer/portainer</span></span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from portainer/portainer</span><br><span class="line">0dbfeadd603d: Pull complete </span><br><span class="line">72a43d7bd731: Pull complete </span><br><span class="line">Digest: sha256:8736c3e0fd899229786c8f2198cd3f63fe2815df249b12758f28ef669028057b</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> portainer/portainer:latest</span><br></pre></td></tr></table></figure><p>Jika sudah selesai proses pull image nya, lanjut kita jalankan portainer nya menggunakan perintah :</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wahidhusain:~ <span class="comment"># docker run -d -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock portainer/portainer</span></span><br><span class="line">deda50a57430151035b54bcb06ed73406ba4012c5278003acc5d9c2beef26552</span><br></pre></td></tr></table></figure><p>Pada perintah untuk menjalankan container nya dalam mode <code>detach</code> atau running di background, jadi container yang sudah dibuat akan tetap berjalan di background.<br>portainer menggunakan port <code>9000</code>, dan lakukan port expose antara host dan container <code>-p 9000:9000</code>.<br>supaya portainer bisa meremote docker secara local di satu host, harus menggunakan option <code>-v /var/run/docker.sock:/var/run/docker.sock</code>.<br>dan yang terakhir pilih nama image nya, yaitu <code>portainer/portainer</code>.</p><p>Selanjutnya akses <code>ip_host:9000</code> di browser kesayangan kalian, dan nanti akan muncul tampilan seperti gambar dibawah :</p><p><img src="https://i.loli.net/2017/11/04/59fd98aeae058.jpg" alt></p><p>Pada gambar diatas kalian harus mengisi password terlebih dahulu sebagai user<code>admin</code>.</p><p>Selanjutnya pilih kemana portainer ingin dihubungkan, apakah ingin ke local, ataupun remote. Dan pada tutorial kali ini saya akan meremote secara local.</p><p><img src="https://i.loli.net/2017/11/04/59fd98e10bfee.jpg" alt></p><p>Jika sudah semuanya maka akan terbuka halaman dashboard dari portainer itu sendiri, dan akan terlihat informasi dari docker yang digunakan, dan yang lainnya. seperti gambar dibawah :</p><p><img src="https://i.loli.net/2017/11/04/59fd9957cbbc1.jpg" alt></p><h2 id="Penutup"><a href="#Penutup" class="headerlink" title="Penutup"></a>Penutup</h2><p>Oke deh, mungkin cukup sekian post kali ini dan post ini belum semuanya, akan saya lanjut ke <code>part 2</code> nya, jadi tunggu saja post nya.<br>Semoga bermanfaat, kalau bisa share ya. Kalau mau copy paste untuk kebutuhan tugas ataupun itu, silahkan dengan cantumkan sumber nya ya.<br>OKe Babayy~~</p><p><img src="https://i.loli.net/2017/10/11/59dd0fd6f3e2e.jpg" alt></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mempercantik tampilan openSUSE leap 42.3</title>
       <link href="/mempercantik-tampilan-opensuse-leap-42/"/>
       <url>/mempercantik-tampilan-opensuse-leap-42/</url>
@@ -45,9 +70,9 @@
       
         <tags>
             
-            <tag> openSUSE </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> openSUSE </tag>
             
         </tags>
       
@@ -72,9 +97,9 @@
       
         <tags>
             
-            <tag> openSUSE </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> openSUSE </tag>
             
         </tags>
       
